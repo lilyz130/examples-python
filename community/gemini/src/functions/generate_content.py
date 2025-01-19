@@ -18,7 +18,7 @@ async def gemini_generate_content(input: FunctionInputParams) -> str:
         encoded_string = base64.b64encode(image_file.read())
         response = client.models.generate_content(
             model='gemini-2.0-flash-exp',
-            contents=[input.user_content, image_file]
+            contents=[input.user_content, encoded_string]
         )
         log.info("gemini_generate_content function completed", response=response.text)
         return response.text
