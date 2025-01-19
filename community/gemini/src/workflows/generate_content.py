@@ -6,8 +6,7 @@ with import_functions():
     from src.functions.generate_content import gemini_generate_content, FunctionInputParams
 
 class WorkflowInputParams(BaseModel):
-    user_content: str = "This image is encoded by base64 model. Now you are a dermatologist. Show me the analysis on the hair, \
-        forehead, eyelids, nose, mouth and cheek. Do you have any recommendations on the product to improve face condition?"
+    user_content: str = "input path"
 
 @workflow.defn()
 class GeminiGenerateContentWorkflow:

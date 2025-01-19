@@ -14,7 +14,7 @@ with import_functions():
     from src.functions.tools import get_current_temperature, get_humidity, get_air_quality
 
 class MultiFunctionCallAdvancedInputParams(BaseModel):
-    user_content: str = "What's the weather in San Francisco?"
+    user_content: str = "This image is encoded by base64 model. Now you are a dermatologist. Show me the analysis on the hair."
 
 @workflow.defn()
 class GeminiMultiFunctionCallAdvancedWorkflow:
